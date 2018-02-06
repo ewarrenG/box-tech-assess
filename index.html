@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank of America Loan Portal</title>
+  <link rel="icon" sizes="32x32" href="https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-global-favicon-favicon-32x32-CSXdfdeaba2.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="box-javascript-sdk/build/BoxSdk.min.js"></script>
+  <!--producing console error-->
+  <!-- <script type="text/javascript" src="box-javascript-sdk/build/BoxSdk.map"></script> -->
+  
+  <script type="text/javascript" src="java.js"></script>
+  
+  <!-- content uploader -->
+  <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.css" />
+</head>
+<body>
+  <div class="logo-container">
+    <img src="https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-global-logos-boa-logo-CSXe4b047c0.svg" alt="Bank of America Logo" itemprop="logo"> 
+    <a href="https://www.bankofamerica.com" itemprop="url" class="hidden"></a>
+  </div>
+
+  <!-- content uploader -->
+  <div class="container" style="height:600px"></div>
+  <script src="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.js"></script>
+  <script>
+      var folderId = '46199583831'; //loan applications
+      var accessToken = 'UnbOsuLrVLVpDv6NWdfe77xCjIrXRyQS';
+      var options = {
+        container: '.container',
+        //size: 'small', 
+        onClose: function(){
+          location.reload();
+        }
+      }
+      var uploader = new Box.ContentUploader();
+      //assign complete event listener
+      uploader.on('complete', function(data){
+        console.log('complete');
+        console.log(data);
+      })
+      uploader.show(folderId, accessToken, options);
+  </script>
+
+</body>
+</html>
