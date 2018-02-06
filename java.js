@@ -1,3 +1,4 @@
+//included for the purposes of reading information from Box
 var box = new BoxSdk();
 var accessToken = "UnbOsuLrVLVpDv6NWdfe77xCjIrXRyQS";
 var boxClient = new box.BasicBoxClient({ accessToken: accessToken });

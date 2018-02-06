@@ -1,2 +1,2 @@
 # box-tech-assess
-simple app that utilize Box's JavaScript SDK and content uploader UI element
+simple app that utilizes Box's JavaScript SDK and content uploader UI element
