@@ -1,0 +1,12 @@
+.container {
+  max-height: 450px;
+}
+
+img{
+  max-width: 100%;
+}
+
+.logo-container{
+  max-width: 100%;
+  overflow: hidden;
+}

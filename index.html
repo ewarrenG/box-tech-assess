@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Bank of America Loan Portal</title>
-  <link rel="icon" sizes="32x32" href="https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-global-favicon-favicon-32x32-CSXdfdeaba2.png">
+  <link rel="icon" sizes="32x32" href="assets/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
@@ -10,14 +10,17 @@
   <!--producing console error-->
   <!-- <script type="text/javascript" src="box-javascript-sdk/build/BoxSdk.map"></script> -->
   
-  <script type="text/javascript" src="java.js"></script>
   
   <!-- content uploader -->
   <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.css" />
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
+  <!--styling to give it look and feel of bofa app-->
   <div class="logo-container">
-    <img src="https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-global-logos-boa-logo-CSXe4b047c0.svg" alt="Bank of America Logo" itemprop="logo"> 
+    <img src="assets/bofa_banner.png" alt="Bank of America Logo" itemprop="logo"> 
     <a href="https://www.bankofamerica.com" itemprop="url" class="hidden"></a>
   </div>
 
@@ -26,10 +29,10 @@
   <script src="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.js"></script>
   <script>
       var folderId = '46199583831'; //loan applications
-      var accessToken = 'UnbOsuLrVLVpDv6NWdfe77xCjIrXRyQS';
+      var accessToken = 'FwHHAfeRnky1PlfzffURG5rugoB9sBza'; //expired
       var options = {
         container: '.container',
-        //size: 'small', 
+        size: 'small', 
         onClose: function(){
           location.reload();
         }
@@ -44,4 +47,5 @@
   </script>
 
 </body>
+<script type="text/javascript" src="java.js"></script>
 </html>
