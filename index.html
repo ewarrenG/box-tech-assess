@@ -4,7 +4,9 @@
   <title>Bank of America Loan Portal</title>
   <link rel="icon" sizes="32x32" href="assets/favicon.png">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
   <script type="text/javascript" src="box-javascript-sdk/build/BoxSdk.min.js"></script>
   <!--producing console error-->
@@ -13,6 +15,10 @@
   
   <!-- content uploader -->
   <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.css" />
+  <script src="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.js"></script>
+
+  <script src="https://cdn01.boxcdn.net/platform/preview/1.28.1/en-US/preview.js"></script>
+  <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/preview/1.28.1/en-US/preview.css" />
 
   <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -20,31 +26,25 @@
 <body>
   <!--styling to give it look and feel of bofa app-->
   <div class="logo-container">
-    <img src="assets/bofa_banner.png" alt="Bank of America Logo" itemprop="logo"> 
-    <a href="https://www.bankofamerica.com" itemprop="url" class="hidden"></a>
+    <img src="assets/banner.png" alt="Bank of America Logo" itemprop="logo"> 
   </div>
 
-  <!-- content uploader -->
-  <div class="container" style="height:600px"></div>
-  <script src="https://cdn01.boxcdn.net/platform/elements/3.5.2/en-US/uploader.js"></script>
-  <script>
-      var folderId = '46199583831'; //loan applications
-      var accessToken = 'FwHHAfeRnky1PlfzffURG5rugoB9sBza'; //expired
-      var options = {
-        container: '.container',
-        size: 'small', 
-        onClose: function(){
-          location.reload();
-        }
-      }
-      var uploader = new Box.ContentUploader();
-      //assign complete event listener
-      uploader.on('complete', function(data){
-        console.log('complete');
-        console.log(data);
-      })
-      uploader.show(folderId, accessToken, options);
-  </script>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#upload">Upload</a></li>
+    <li class="hide"><a data-toggle="tab" href="#preview">Preview</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="upload" class="tab-pane fade in active">
+      <!-- content uploader -->
+      <div class="container" style="height:600px"></div>
+    </div>
+    <div id="preview" class="tab-pane fade">
+      <div class="preview-container" style="height:400px; width:100%;"></div>
+    </div>
+  </div>
+
+
 
 </body>
 <script type="text/javascript" src="java.js"></script>

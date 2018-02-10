@@ -1,4 +1,23 @@
-.container {
+.abs-top-right{
+	position: absolute;
+	top: 20px;
+	right: 300px;
+	z-index: 1;
+
+	/*appearence to make it match other elements*/
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #fff;
+    padding: 0 20px;
+    white-space: normal;
+    font-size: 14px;
+    border-right: 1px dotted #fff;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+.container, .preview-container {
   max-height: 450px;
 }
 
